@@ -1,5 +1,5 @@
-# micronaut-data-graalvm-kotlin
-Example of a simple Micronaut CRUD application using Micronaut Data and supporting GraalVM/SubstrateVM
+# Micronaut app using Micronaut Data and GraalVM (written in Kotlin) 
+Example of a simple [Micronaut](https://micronaut.io/) CRUD application using [Micronaut Data](https://micronaut-projects.github.io/micronaut-data/latest/guide/) and supporting [Oracle's GraalVM/SubstrateVM](https://www.graalvm.org/docs/reference-manual/native-image/)
 
 ### Building and executing the application:
 
