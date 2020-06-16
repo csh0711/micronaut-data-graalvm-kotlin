@@ -3,7 +3,6 @@ package info.novatec
 import io.micronaut.core.annotation.TypeHint
 import io.micronaut.runtime.Micronaut
 
-//@TypeHint(typeNames = ["org.h2.Driver", "org.h2.mvstore.db.MVTableEngine"])
 @TypeHint(org.postgresql.Driver::class)
 object Application {
 

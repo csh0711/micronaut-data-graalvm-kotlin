@@ -20,16 +20,11 @@ configurations {
 }
 
 dependencies {
-    annotationProcessor 'io.micronaut.data:micronaut-data-processor:1.0.0'
-    kapt 'io.micronaut.data:micronaut-data-processor:1.0.0' // TODO which one ?
+    kapt 'io.micronaut.data:micronaut-data-processor:1.0.0'
     compile 'io.micronaut.data:micronaut-data-jdbc:1.0.2'
     runtime 'io.micronaut.configuration:micronaut-jdbc-hikari'
     compileOnly 'jakarta.persistence:jakarta.persistence-api:2.2.2'
-
-    // runtime 'com.h2database:h2'
     compile 'org.postgresql:postgresql:42.2.9'
-
-
     compileOnly "org.graalvm.nativeimage:svm"
     implementation platform("io.micronaut:micronaut-bom:$micronautVersion")
     implementation "io.micronaut:micronaut-http-client"
