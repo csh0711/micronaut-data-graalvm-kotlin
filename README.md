@@ -11,12 +11,12 @@ and supporting [Oracle's GraalVM/SubstrateVM](https://www.graalvm.org/docs/refer
   - [Setup PostgreSQL with Docker](#setup-postgresql-with-docker)
 
 ### Scenario 
-The example contains a _Footballmanager_ microservice which accesses a PostgreSQL and provides the data via REST/JSON.
+The example contains a _Footballmanager_ microservice which accesses a PostgreSQL database and provides the data via REST/JSON.
 
 <img src="micronaut-data-kotlin-graalvm.png" alt="Scenario" width="600"/>
 
 
-To create a new _Footballer_ a POST request needs to be submitted to the REST endpoint `http://localhost:8080/footballers`:
+To create a new _Footballer_ a _POST_ request needs to be submitted to the REST endpoint `http://localhost:8080/footballers`:
 ```
 {
   "firstName": "Toni",
@@ -25,7 +25,7 @@ To create a new _Footballer_ a POST request needs to be submitted to the REST en
 }
 ```
 
-All existing Footballers can be retrieved be sending a GET request to `http://localhost:8080/footballers`. 
+All existing Footballers can be retrieved be sending a _GET_ request to `http://localhost:8080/footballers`. 
 
 With the optional request parameter `position` all Footballers of a certain position are determined 
 (`e.g. http://localhost:8080/footballers?position=Midfield`).
