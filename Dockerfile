@@ -1,13 +1,13 @@
-FROM oracle/graalvm-ce:19.3.1-java8 as graalvm
-#FROM oracle/graalvm-ce:19.3.1-java11 as graalvm # For JDK 11
+FROM oracle/graalvm-ce:20.1.0-java11 as graalvm
 RUN gu install native-image
 
-COPY . /home/app/footballmanager
-WORKDIR /home/app/footballmanager
+COPY . /home/app/footballermanager
+WORKDIR /home/app/footballermanager
 
-RUN native-image --no-server --static -cp build/libs/footballmanager-*-all.jar
+RUN native-image --no-server -cp build/libs/footballermanager-*-all.jar
 
-FROM scratch
+FROM frolvlad/alpine-glibc
+RUN apk update && apk add libstdc++
 EXPOSE 8080
-COPY --from=graalvm /home/app/footballmanager/footballmanager /app/footballmanager
-ENTRYPOINT ["/app/footballmanager", "-Djava.library.path=/app"]
+COPY --from=graalvm /home/app/footballermanager/footballermanager /app/footballermanager
+ENTRYPOINT ["/app/footballermanager"]

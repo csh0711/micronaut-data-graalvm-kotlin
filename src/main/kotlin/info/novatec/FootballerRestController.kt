@@ -9,11 +9,11 @@ class FootballerRestController(
 ) {
 
     @Get("/")
-    fun search(@QueryValue("position") position: String?): List<Footballer> {
-        return if (position != null) {
-            repository.findByPosition(position)
-        } else {
+    fun search(@QueryValue position: String?): List<Footballer> {
+        return if (position.isNullOrEmpty()) {
             repository.findAll().toList()
+        } else {
+            repository.findByPosition(position)
         }
     }
 

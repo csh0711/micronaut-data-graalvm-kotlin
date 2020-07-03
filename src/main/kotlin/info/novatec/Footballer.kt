@@ -9,7 +9,7 @@ import javax.persistence.Id
 @Entity
 data class Footballer(
         @Id @GeneratedValue var id: Long?,
-        val firstName: String?,
-        val lastName: String?,
-        val position: String?
+        val firstName: String,
+        val lastName: String,
+        val position: String
 )

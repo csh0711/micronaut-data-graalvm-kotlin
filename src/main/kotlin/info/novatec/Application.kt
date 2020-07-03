@@ -1,16 +1,14 @@
 package info.novatec
 
 import io.micronaut.core.annotation.TypeHint
-import io.micronaut.runtime.Micronaut
+import io.micronaut.runtime.Micronaut.*
 
 @TypeHint(org.postgresql.Driver::class)
-object Application {
+class Application
 
-    @JvmStatic
-    fun main(args: Array<String>) {
-        Micronaut.build()
-                .packages("info.novatec")
-                .mainClass(Application.javaClass)
-                .start()
-    }
+fun main(args: Array<String>) {
+	build()
+	    .args(*args)
+		.packages("info.novatec")
+		.start()
 }

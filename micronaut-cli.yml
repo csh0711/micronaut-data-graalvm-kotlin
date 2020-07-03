@@ -1,5 +1,6 @@
-profile: service
+applicationType: default
 defaultPackage: info.novatec
----
-testFramework: kotlintest
+testFramework: junit
 sourceLanguage: kotlin
+buildTool: gradle
+features: [annotation-api, app-name, data, data-jdbc, docker, file-watch, graalvm, gradle, h2, http-client, jdbc-hikari, junit, kotlin, kotlin-application, logback, netty-server, readme, shade, yaml]
