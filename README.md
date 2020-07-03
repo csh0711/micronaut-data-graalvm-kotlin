@@ -6,6 +6,8 @@ and supporting [Oracle's GraalVM/SubstrateVM](https://www.graalvm.org/docs/refer
 + [Scenario](#scenario)
 + [Setup](#setup)
 + [Building and executing the application](#building-and-executing-the-application)
+  - [Running on the JVM](#running-on-the-jvm)
+  - [Using the native image](#using-the-native-image)
 + [Further hints](#further-hints)
   - [Install GraalVM](#install-graalvm)
   - [Setup PostgreSQL with Docker](#setup-postgresql-with-docker)
@@ -36,6 +38,8 @@ See [below](#setup-postgresql-with-docker) how to setup a dockerized PostgreSQL.
 
 ### Building and executing the application
 
+#### Running on the JVM
+
 Building the Fat-/Uber-Jar with Gradle:
 ```
 ./gradlew clean shadowJar
@@ -48,6 +52,8 @@ java -jar build/libs/footballmanager-0.1-all.jar
 
 (Or you just start the `Application.kt` in your IDE).
 
+
+#### Using the native image
 
 Build the native image with GraalVM/SubstrateVM (installation see [below](#install-graalvm)):
 
