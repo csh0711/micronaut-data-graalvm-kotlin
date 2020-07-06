@@ -1,11 +1,10 @@
 package info.novatec
 
 import io.micronaut.http.annotation.*
-import java.util.*
 
 @Controller("/footballers")
 class FootballerRestController(
-        private val repository: FootballerRepository
+    private val repository: FootballerRepository
 ) {
 
     @Get("/")

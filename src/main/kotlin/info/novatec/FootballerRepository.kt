@@ -5,7 +5,7 @@ import io.micronaut.data.model.query.builder.sql.Dialect
 import io.micronaut.data.repository.CrudRepository
 
 @JdbcRepository(dialect = Dialect.POSTGRES)
-interface FootballerRepository: CrudRepository<Footballer, Long> {
+interface FootballerRepository : CrudRepository<Footballer, Long> {
 
     fun findByPosition(position: String): List<Footballer>
 }
