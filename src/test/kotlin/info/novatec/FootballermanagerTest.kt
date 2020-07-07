@@ -2,19 +2,16 @@ package info.novatec
 
 import io.micronaut.runtime.EmbeddedApplication
 import io.micronaut.test.annotation.MicronautTest
-import org.junit.jupiter.api.Assertions
+import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
-import javax.inject.Inject
 
 @MicronautTest
-class FootballermanagerTest {
-
-    @Inject
-    lateinit var application: EmbeddedApplication<*>
+class FootballermanagerTest(
+    private val application: EmbeddedApplication<*>
+) {
 
     @Test
     fun testItWorks() {
-        Assertions.assertTrue(application.isRunning)
+        assertThat(application.isRunning).isTrue()
     }
-
 }
