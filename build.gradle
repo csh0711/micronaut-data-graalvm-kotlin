@@ -51,8 +51,6 @@ dependencies {
     testImplementation(platform("io.micronaut:micronaut-bom:$micronautVersion"))
     testImplementation("org.junit.jupiter:junit-jupiter-api")
     testImplementation("io.micronaut.test:micronaut-test-junit5")
-    testImplementation("io.kotlintest:kotlintest-runner-junit5:3.3.2")
-    testImplementation("io.micronaut.test:micronaut-test-kotlintest")
     testRuntime("org.junit.jupiter:junit-jupiter-engine")
     testCompile("io.mockk:mockk:1.10.0")
     testCompile("org.assertj:assertj-core:3.16.1")
