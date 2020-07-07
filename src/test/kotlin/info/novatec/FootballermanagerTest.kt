@@ -1,4 +1,5 @@
 package info.novatec
+
 import io.micronaut.runtime.EmbeddedApplication
 import io.micronaut.test.annotation.MicronautTest
 import org.junit.jupiter.api.Assertions
