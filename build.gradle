@@ -43,7 +43,6 @@ dependencies {
     implementation("io.micronaut.data:micronaut-data-jdbc")
     runtimeOnly("ch.qos.logback:logback-classic")
     runtimeOnly("com.fasterxml.jackson.module:jackson-module-kotlin")
-    runtimeOnly("com.h2database:h2")
 
     kaptTest(platform("io.micronaut:micronaut-bom:$micronautVersion"))
     kaptTest("io.micronaut:micronaut-inject-java")
@@ -55,6 +54,7 @@ dependencies {
     testCompile("io.mockk:mockk:1.10.0")
     testCompile("org.assertj:assertj-core:3.16.1")
     testCompile("org.skyscreamer:jsonassert:1.5.0")
+    testRuntimeOnly("com.h2database:h2")
 }
 
 test.classpath += configurations.developmentOnly
