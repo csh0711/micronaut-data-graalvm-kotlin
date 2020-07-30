@@ -4,7 +4,7 @@ import io.micronaut.test.annotation.MicronautTest
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
 
-@MicronautTest(environments = ["test"])
+@MicronautTest
 class FootballerRepositoryTests(
     private val repository: FootballerRepository
 ) {
