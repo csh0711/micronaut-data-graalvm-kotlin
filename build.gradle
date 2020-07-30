@@ -28,7 +28,7 @@ dependencies {
     compile("org.postgresql:postgresql:42.2.14")
     compileOnly(platform("io.micronaut:micronaut-bom:$micronautVersion"))
     compileOnly("org.graalvm.nativeimage:svm")
-    compileOnly("jakarta.persistence:jakarta.persistence-api:2.2.2")
+    compileOnly("jakarta.persistence:jakarta.persistence-api:2.2.3")
     implementation(platform("io.micronaut:micronaut-bom:$micronautVersion"))
     implementation("io.micronaut:micronaut-inject")
     implementation("io.micronaut:micronaut-validation")
