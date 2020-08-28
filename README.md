@@ -58,7 +58,7 @@ java -jar build/libs/footballmanager-0.1-all.jar
 Build the native image with GraalVM/SubstrateVM (installation see [below](#install-graalvm)):
 
 ```
-sdk use java 20.1.0.r11-grl
+sdk use java 20.2.0.r11-grl
 
 ./gradlew clean assemble
 
@@ -74,7 +74,7 @@ Executing the native image via:
 
 #### Install GraalVM 
 To manage SDK versions on your local machine [SDKMAN!](https://sdkman.io/jdks#Oracle) is a very helpful tool.
-Oracle's GraalVM can be installed with `sdk install java 20.1.0.r11-grl` (or appropriate version).
+Oracle's GraalVM can be installed with `sdk install java 20.2.0.r11-grl` (or appropriate version).
 
 Furthermore [GraalVM’s `native-image` tool](https://www.graalvm.org/docs/reference-manual/native-image/) must 
 be installed with `gu install native-image`. 
