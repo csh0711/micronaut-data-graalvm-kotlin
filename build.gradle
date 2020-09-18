@@ -52,7 +52,7 @@ dependencies {
     testImplementation("io.micronaut.test:micronaut-test-junit5")
     testRuntime("org.junit.jupiter:junit-jupiter-engine")
     testCompile("io.mockk:mockk:1.10.0")
-    testCompile("org.assertj:assertj-core:3.10.0")
+    testCompile("org.assertj:assertj-core:3.17.2")
     testCompile("org.skyscreamer:jsonassert:1.5.0")
     testRuntimeOnly("com.h2database:h2")
 }
