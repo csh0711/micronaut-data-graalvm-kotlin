@@ -9,7 +9,7 @@ import io.micronaut.test.annotation.MockBean
 import io.mockk.*
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
-import org.skyscreamer.jsonassert.JSONAssert
+import org.skyscreamer.jsonassert.JSONAssert.assertEquals
 import org.skyscreamer.jsonassert.JSONCompareMode.NON_EXTENSIBLE
 import java.util.*
 import javax.inject.Inject
@@ -64,7 +64,7 @@ class FootballerRestControllerTests {
 
         val body = client.toBlocking().retrieve("/footballers")
 
-        JSONAssert.assertEquals(responseJson, body, NON_EXTENSIBLE);
+        assertEquals(responseJson, body, NON_EXTENSIBLE);
     }
 
     @Test
@@ -90,7 +90,7 @@ class FootballerRestControllerTests {
 
         val body = client.toBlocking().retrieve("/footballers?position=Midfield")
 
-        JSONAssert.assertEquals(responseJson, body, NON_EXTENSIBLE);
+        assertEquals(responseJson, body, NON_EXTENSIBLE);
     }
 
     @Test
@@ -108,7 +108,7 @@ class FootballerRestControllerTests {
 
         val body = client.toBlocking().retrieve("/footballers/10")
 
-        JSONAssert.assertEquals(responseJson, body, NON_EXTENSIBLE);
+        assertEquals(responseJson, body, NON_EXTENSIBLE);
     }
 
     @Test
@@ -140,7 +140,7 @@ class FootballerRestControllerTests {
             assertThat(firstName).isEqualTo("Toni")
             assertThat(position).isEqualTo("Midfield")
         }
-        JSONAssert.assertEquals(responseJson, body, NON_EXTENSIBLE);
+        assertEquals(responseJson, body, NON_EXTENSIBLE);
     }
 
     @Test
