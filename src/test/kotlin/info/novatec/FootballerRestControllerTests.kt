@@ -4,6 +4,8 @@ import io.micronaut.http.HttpRequest.DELETE
 import io.micronaut.http.HttpRequest.POST
 import io.micronaut.http.client.RxHttpClient
 import io.micronaut.http.client.annotation.Client
+import io.micronaut.scheduling.TaskExecutors
+import io.micronaut.scheduling.annotation.ExecuteOn
 import io.micronaut.test.annotation.MicronautTest
 import io.micronaut.test.annotation.MockBean
 import io.mockk.*
@@ -17,6 +19,7 @@ import javax.inject.Inject
 private val repository: FootballerRepository = mockk()
 
 @MicronautTest
+@ExecuteOn(TaskExecutors.IO)
 class FootballerRestControllerTests {
 
     @MockBean(FootballerRepository::class)
