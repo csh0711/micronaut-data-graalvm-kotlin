@@ -6,8 +6,8 @@ import io.micronaut.http.client.RxHttpClient
 import io.micronaut.http.client.annotation.Client
 import io.micronaut.scheduling.TaskExecutors
 import io.micronaut.scheduling.annotation.ExecuteOn
-import io.micronaut.test.annotation.MicronautTest
 import io.micronaut.test.annotation.MockBean
+import io.micronaut.test.extensions.junit5.annotation.MicronautTest
 import io.mockk.*
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
@@ -67,7 +67,7 @@ class FootballerRestControllerTests {
 
         val body = client.toBlocking().retrieve("/footballers")
 
-        assertEquals(responseJson, body, NON_EXTENSIBLE);
+        assertEquals(responseJson, body, NON_EXTENSIBLE)
     }
 
     @Test
@@ -93,7 +93,7 @@ class FootballerRestControllerTests {
 
         val body = client.toBlocking().retrieve("/footballers?position=Midfield")
 
-        assertEquals(responseJson, body, NON_EXTENSIBLE);
+        assertEquals(responseJson, body, NON_EXTENSIBLE)
     }
 
     @Test
@@ -111,7 +111,7 @@ class FootballerRestControllerTests {
 
         val body = client.toBlocking().retrieve("/footballers/10")
 
-        assertEquals(responseJson, body, NON_EXTENSIBLE);
+        assertEquals(responseJson, body, NON_EXTENSIBLE)
     }
 
     @Test
@@ -143,7 +143,7 @@ class FootballerRestControllerTests {
             assertThat(firstName).isEqualTo("Toni")
             assertThat(position).isEqualTo("Midfield")
         }
-        assertEquals(responseJson, body, NON_EXTENSIBLE);
+        assertEquals(responseJson, body, NON_EXTENSIBLE)
     }
 
     @Test

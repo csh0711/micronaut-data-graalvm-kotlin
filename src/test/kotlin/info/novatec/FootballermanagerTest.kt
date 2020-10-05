@@ -1,7 +1,7 @@
 package info.novatec
 
 import io.micronaut.runtime.EmbeddedApplication
-import io.micronaut.test.annotation.MicronautTest
+import io.micronaut.test.extensions.junit5.annotation.MicronautTest
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
 
@@ -12,6 +12,6 @@ class FootballermanagerTest(
 
     @Test
     fun testItWorks() {
-        assertThat(application.isRunning).isTrue()
+        assertThat(application.isRunning).isTrue
     }
 }

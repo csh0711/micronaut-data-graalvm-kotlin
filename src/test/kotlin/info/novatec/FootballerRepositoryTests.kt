@@ -1,6 +1,6 @@
 package info.novatec
 
-import io.micronaut.test.annotation.MicronautTest
+import io.micronaut.test.extensions.junit5.annotation.MicronautTest
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
 
@@ -22,13 +22,13 @@ class FootballerRepositoryTests(
 
         assertThat(midfieldFootballers).hasSize(2)
         with(midfieldFootballers[0]) {
-            assertThat(id).isNotNull()
+            assertThat(id).isNotNull
             assertThat(lastName).isEqualTo("Gnabry")
             assertThat(firstName).isEqualTo("Serge")
             assertThat(position).isEqualTo("Midfield")
         }
         with(midfieldFootballers[1]) {
-            assertThat(id).isNotNull()
+            assertThat(id).isNotNull
             assertThat(lastName).isEqualTo("Kroos")
             assertThat(firstName).isEqualTo("Toni")
             assertThat(position).isEqualTo("Midfield")
