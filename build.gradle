@@ -3,20 +3,24 @@ plugins {
     id "org.jetbrains.kotlin.kapt" version "1.4.10"
     id "org.jetbrains.kotlin.plugin.allopen" version "1.4.10"
     id "com.github.johnrengelman.shadow" version "6.0.0"
-    id "application"
+    id "io.micronaut.application" version "1.0.3"
 }
 
 version "0.1"
 group "info.novatec"
 
 repositories {
-    mavenCentral()
     jcenter()
+    mavenCentral()
 }
 
-configurations {
-    // for dependencies that are needed for development only
-    developmentOnly
+micronaut {
+    runtime "netty"
+    testRuntime "junit5"
+    processing {
+        incremental true
+        annotations "info.novatec.*"
+    }
 }
 
 dependencies {
@@ -57,22 +61,12 @@ dependencies {
     testRuntimeOnly("com.h2database:h2")
 }
 
-test.classpath += configurations.developmentOnly
-
 mainClassName = "info.novatec.ApplicationKt"
-
-// use JUnit 5 platform
-test {
-    useJUnitPlatform()
-}
 
 java {
     sourceCompatibility = JavaVersion.toVersion('11')
 }
 
-allOpen {
-    annotation("io.micronaut.aop.Around")
-}
 compileKotlin {
     kotlinOptions {
         jvmTarget = '11'
@@ -86,30 +80,3 @@ compileTestKotlin {
         javaParameters = true
     }
 }
-kapt {
-    arguments {
-        arg("micronaut.processing.incremental", true)
-        arg("micronaut.processing.annotations", "info.novatec.*")
-        arg("micronaut.processing.group", "info.novatec")
-        arg("micronaut.processing.module", "footballermanager")
-    }
-}
-
-shadowJar {
-    mergeServiceFiles()
-}
-
-tasks.withType(JavaExec) {
-    classpath += configurations.developmentOnly
-    jvmArgs('-XX:TieredStopAtLevel=1', '-Dcom.sun.management.jmxremote')
-    if (gradle.startParameter.continuous) {
-        systemProperties(
-                'micronaut.io.watch.restart': 'true',
-                'micronaut.io.watch.enabled': 'true',
-                "micronaut.io.watch.paths": "src/main"
-        )
-    }
-}
-
-
-

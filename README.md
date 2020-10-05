@@ -55,7 +55,9 @@ java -jar build/libs/footballmanager-0.1-all.jar
 
 #### Using the native image
 
-Build the native image with GraalVM/SubstrateVM (installation see [below](#install-graalvm)):
+How to build a native image of the application with GraalVM/SubstrateVM (installation see [below](#install-graalvm)).
+
+##### Using [GraalVM’s `native-image` tool](https://www.graalvm.org/docs/reference-manual/native-image/):
 
 ```
 sdk use java 20.2.0.r11-grl
@@ -64,11 +66,26 @@ sdk use java 20.2.0.r11-grl
 
 native-image --no-server -cp build/libs/footballmanager-0.1-all.jar
 ```
-
 Executing the native image via: 
 ```
 ./footballmanager 
 ```
+
+##### Using [Micronaut's Gradle Plugin](https://github.com/micronaut-projects/micronaut-gradle-plugin):
+
+Since Micronaut 2.1.0 you can delegate the native image generation to 
+[Micronaut's Gradle Plugin](https://github.com/micronaut-projects/micronaut-gradle-plugin):
+```
+sdk use java 20.2.0.r11-grl
+
+./gradlew nativeImage  
+
+```
+Executing the native image via: 
+```
+./build/native-image/application 
+```
+
 
 ### Further hints
 
@@ -76,8 +93,9 @@ Executing the native image via:
 To manage SDK versions on your local machine [SDKMAN!](https://sdkman.io/jdks#Oracle) is a very helpful tool.
 Oracle's GraalVM can be installed with `sdk install java 20.2.0.r11-grl` (or appropriate version).
 
-Furthermore [GraalVM’s `native-image` tool](https://www.graalvm.org/docs/reference-manual/native-image/) must 
-be installed with `gu install native-image`. 
+If you don't want to use [Micronaut's Gradle Plugin](https://github.com/micronaut-projects/micronaut-gradle-plugin) 
+you have to install [GraalVM’s `native-image` tool](https://www.graalvm.org/docs/reference-manual/native-image/) 
+with the command `gu install native-image`. 
 
 #### Setup PostgreSQL with Docker
 Execute the following steps:
