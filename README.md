@@ -13,6 +13,7 @@ and supporting [Oracle's GraalVM/SubstrateVM](https://www.graalvm.org/docs/refer
 + [Further hints](#further-hints)
   - [Install GraalVM](#install-graalvm)
   - [Setup PostgreSQL with Docker](#setup-postgresql-with-docker)
+  - [Fixing possible errors](#fixing-possible-errors)
 
 ### Scenario 
 The example contains a _Footballmanager_ microservice which accesses a PostgreSQL and provides the data via REST/JSON.
@@ -109,4 +110,20 @@ docker run -p 5432:5432 --name postgres-db -e POSTGRES_PASSWORD=mysecretpassword
 docker exec -it postgres-db bash
 psql -U postgres
 CREATE DATABASE footballerdb;
+```
+#### Fixing possible errors
+When  the first request after starting the app results in an error like this:
+
+```
+{
+   "message": "Internal Server Error: SQL Error executing Query: ERROR: relation \"footballer\" does not exist\n  Position: 102"
+}
+```
+Please make sure that these properties are set in your `application.yaml`, so that the table `footballer`is created:
+
+```
+datasources:
+  default:
+    schema-generate: CREATE  # or CREATE_DROP if you want the table to be re-created with each app start
+    dialect: postgres
 ```
