@@ -112,14 +112,14 @@ psql -U postgres
 CREATE DATABASE footballerdb;
 ```
 #### Fixing possible errors
-When  the first request after starting the app results in an error like this:
+**Problem:** The first request after starting the app results in an error like this:
 
 ```
 {
    "message": "Internal Server Error: SQL Error executing Query: ERROR: relation \"footballer\" does not exist\n  Position: 102"
 }
 ```
-Please make sure that these properties are set in your `application.yaml`, so that the table `footballer`is created:
+**Solution:** Please make sure that these properties are set in the `application.yaml` so that the table `footballer` is created:
 
 ```
 datasources:
