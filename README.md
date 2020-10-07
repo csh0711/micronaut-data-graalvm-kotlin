@@ -1,4 +1,4 @@
-![Java CI with Gradle](https://github.com/csh0711/micronaut-data-graalvm-kotlin/workflows/Java%20CI%20with%20Gradle/badge.svg?branch=master)
+![Java CI with Gradle](https://github.com/csh0711/micronaut-data-graalvm-kotlin/workflows/Java%20CI%20with%20Gradle/badge.svg?branch=master) [![Pure Kotlin](https://img.shields.io/badge/100%25-kotlin-blue.svg)](https://kotlinlang.org/)
 
 # Micronaut app using Micronaut Data and GraalVM (written in Kotlin) 
 Sample of a simple [Micronaut](https://micronaut.io/) CRUD application using 
