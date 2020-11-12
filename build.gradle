@@ -29,7 +29,7 @@ dependencies {
     kapt("io.micronaut:micronaut-validation")
     kapt("io.micronaut:micronaut-graal")
     kapt("io.micronaut.data:micronaut-data-processor")
-    compile("org.postgresql:postgresql:42.2.16")
+    compile("org.postgresql:postgresql:42.2.18")
     compileOnly(platform("io.micronaut:micronaut-bom:$micronautVersion"))
     compileOnly("org.graalvm.nativeimage:svm")
     compileOnly("jakarta.persistence:jakarta.persistence-api:2.2.3")
@@ -56,7 +56,7 @@ dependencies {
     testImplementation("io.micronaut.test:micronaut-test-junit5")
     testRuntime("org.junit.jupiter:junit-jupiter-engine")
     testCompile("io.mockk:mockk:1.10.2")
-    testCompile("org.assertj:assertj-core:3.18.0")
+    testCompile("org.assertj:assertj-core:3.18.1")
     testCompile("org.skyscreamer:jsonassert:1.5.0")
     testRuntimeOnly("com.h2database:h2")
 }
