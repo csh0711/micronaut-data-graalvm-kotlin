@@ -50,7 +50,7 @@ Building the Fat-/Uber-Jar with Gradle:
 
 Executing the JAR via:
 ```
-java -jar build/libs/footballmanager-0.1-all.jar
+java -jar build/libs/footballermanager-0.1-all.jar
 ```
 
 (Or you just start the `Application.kt` in your IDE).
@@ -67,7 +67,7 @@ sdk use java 20.3.0.r11-grl
 
 ./gradlew clean assemble
 
-native-image --no-server -cp build/libs/footballmanager-0.1-all.jar
+native-image --no-server -cp build/libs/footballermanager-0.1-all.jar
 ```
 Executing the native image via: 
 ```
