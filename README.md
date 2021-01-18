@@ -71,7 +71,7 @@ native-image --no-server -cp build/libs/footballermanager-0.1-all.jar
 ```
 Executing the native image via: 
 ```
-./footballmanager 
+./footballermanager 
 ```
 
 ##### Using [Micronaut's Gradle Plugin](https://github.com/micronaut-projects/micronaut-gradle-plugin):
