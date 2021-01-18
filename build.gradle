@@ -1,7 +1,7 @@
 plugins {
-    id "org.jetbrains.kotlin.jvm" version "1.4.20"
-    id "org.jetbrains.kotlin.kapt" version "1.4.20"
-    id "org.jetbrains.kotlin.plugin.allopen" version "1.4.20"
+    id "org.jetbrains.kotlin.jvm" version "1.4.21"
+    id "org.jetbrains.kotlin.kapt" version "1.4.21"
+    id "org.jetbrains.kotlin.plugin.allopen" version "1.4.21"
     id "com.github.johnrengelman.shadow" version "6.0.0"
     id "io.micronaut.application" version "1.2.0"
 }
@@ -55,7 +55,7 @@ dependencies {
     testImplementation("org.junit.jupiter:junit-jupiter-api")
     testImplementation("io.micronaut.test:micronaut-test-junit5")
     testRuntime("org.junit.jupiter:junit-jupiter-engine")
-    testCompile("io.mockk:mockk:1.10.2")
+    testCompile("io.mockk:mockk:1.10.5")
     testCompile("org.assertj:assertj-core:3.18.1")
     testCompile("org.skyscreamer:jsonassert:1.5.0")
     testRuntimeOnly("com.h2database:h2")
