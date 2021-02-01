@@ -1,6 +1,6 @@
 micronaut:
   application:
-    name: footballmanager
+    name: footballermanager
 datasources:
   default:
     driverClassName: org.postgresql.Driver
