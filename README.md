@@ -94,7 +94,7 @@ Executing the native image via:
 
 #### Install GraalVM 
 To manage SDK versions on your local machine [SDKMAN!](https://sdkman.io/jdks#Oracle) is a very helpful tool.
-Oracle's GraalVM can be installed with `sdk use java 21.1.0.r11-grl` (or appropriate version).
+Oracle's GraalVM can be installed with `sdk install java 21.1.0.r11-grl` (or appropriate version).
 
 If you don't want to use [Micronaut's Gradle Plugin](https://github.com/micronaut-projects/micronaut-gradle-plugin) 
 you have to install [GraalVM’s `native-image` tool](https://www.graalvm.org/docs/reference-manual/native-image/) 
