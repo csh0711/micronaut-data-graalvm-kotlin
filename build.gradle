@@ -1,9 +1,9 @@
 plugins {
-    id "org.jetbrains.kotlin.jvm" version "1.5.0"
-    id "org.jetbrains.kotlin.kapt" version "1.5.0"
-    id "org.jetbrains.kotlin.plugin.allopen" version "1.5.0"
+    id "org.jetbrains.kotlin.jvm" version "1.5.21"
+    id "org.jetbrains.kotlin.kapt" version "1.5.21"
+    id "org.jetbrains.kotlin.plugin.allopen" version "1.5.21"
     id "com.github.johnrengelman.shadow" version "6.0.0"
-    id "io.micronaut.application" version "1.5.0"
+    id "io.micronaut.application" version "2.0.2"
 }
 
 version "0.1"
@@ -29,7 +29,7 @@ dependencies {
     kapt("io.micronaut:micronaut-validation")
     kapt("io.micronaut:micronaut-graal")
     kapt("io.micronaut.data:micronaut-data-processor")
-    compile("org.postgresql:postgresql:42.2.22")
+    compile("org.postgresql:postgresql:42.2.23")
     compileOnly(platform("io.micronaut:micronaut-bom:$micronautVersion"))
     compileOnly("org.graalvm.nativeimage:svm")
     compileOnly("jakarta.persistence:jakarta.persistence-api:2.2.3")
@@ -55,7 +55,7 @@ dependencies {
     testImplementation("org.junit.jupiter:junit-jupiter-api")
     testImplementation("io.micronaut.test:micronaut-test-junit5")
     testRuntime("org.junit.jupiter:junit-jupiter-engine")
-    testCompile("io.mockk:mockk:1.11.0")
+    testCompile("io.mockk:mockk:1.12.0")
     testCompile("org.assertj:assertj-core:3.20.2")
     testCompile("org.skyscreamer:jsonassert:1.5.0")
     testRuntimeOnly("com.h2database:h2")
