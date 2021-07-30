@@ -1,4 +1,4 @@
-FROM oracle/graalvm-ce:21.1.0-java11 as graalvm
+FROM oracle/graalvm-ce:21.2.0-java11 as graalvm
 RUN gu install native-image
 
 COPY . /home/app/footballermanager
